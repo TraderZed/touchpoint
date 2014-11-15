@@ -1,0 +1,63 @@
+/*-------------------------------------------------------------------------
+	
+	TOUCHPOINT FILMS
+	
+	TABLET + DESKTOP
+	-----------------------------------
+	
+	- Body & Wrapper
+	- Header
+	- Sections
+
+-------------------------------------------------------------------------*/
+
+.mobile {
+	display: none !important;
+}
+
+/* BODY & WRAPPER ------------*/
+
+body {
+	text-align: left;
+}
+
+section, .masthead {
+	padding: 50px;
+}
+
+.masthead {
+	display: block;
+	
+	h2 {
+		text-decoration: none;
+		span {
+			text-decoration: line-through;
+		}
+	}
+	
+	a {
+		margin: 0 20px 0 0;
+	}
+}
+
+/* HEADER ------------*/
+
+header {
+	background: transparent;
+	padding: 50px;
+	color: #fff;
+}
+
+#contact {
+	background: rgba(0,0,0,.5);
+	overflow: hidden;
+
+	div {
+		float: left;
+		margin: 0 100px 50px 0;
+		
+		h3 {
+			margin-top: 0;
+		}
+	}
+}

@@ -33,7 +33,153 @@
 -------------------------------------------------------------------------*/
 /* HELPERS --------------------------------------------------------------*/
 /* CORE STYLES ----------------------------------------------------------*/
+/*-------------------------------------------------------------------------
+	
+	TOUCHPOINT FILMS
+	
+	TYPOGRAPHY
+	-----------------------------------
+	
+	- Headers
+
+-------------------------------------------------------------------------*/
+/* line 12, ../../resources/sass/core/_typography.scss */
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-family: 'Fjalla One', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px; }
+
+/* line 20, ../../resources/sass/core/_typography.scss */
+h2 {
+  font-size: 66px;
+  font-family: 'Fjalla One', sans-serif;
+  text-transform: uppercase;
+  text-decoration: line-through; }
+
+/* line 27, ../../resources/sass/core/_typography.scss */
+h3 {
+  margin-bottom: 0;
+  font-size: 30px;
+  font-family: 'Fjalla One', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px; }
+
+/* line 35, ../../resources/sass/core/_typography.scss */
+p {
+  margin-top: 0; }
+
+/* line 39, ../../resources/sass/core/_typography.scss */
+a {
+  color: #fff; }
+
+/*-------------------------------------------------------------------------
+	
+	TOUCHPOINT FILMS
+	
+	BUTTON STYLES
+	-----------------------------------
+	
+	- Basic
+
+-------------------------------------------------------------------------*/
+/* line 12, ../../resources/sass/core/_buttons.scss */
+.button {
+  padding: 10px 40px;
+  border: 2px solid #fff;
+  font-size: 30px;
+  font-family: 'Fjalla One', sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 4px;
+  color: #fff; }
+
 /* STRUCTURE ------------------------------------------------------------*/
+/*-------------------------------------------------------------------------
+	
+	TOUCHPOINT FILMS
+	
+	MOBILE STYLES
+	-----------------------------------
+	
+	- Body & Wrapper
+	- Masthead
+	- Sections
+
+-------------------------------------------------------------------------*/
+/* BODY & WRAPPER ---------------------*/
+/* line 16, ../../resources/sass/_structure.scss */
+body {
+  background: #000;
+  padding: 0;
+  margin: 0;
+  font-size: 11px;
+  font-family: "Courier", sans-serif;
+  text-align: center;
+  color: #fff; }
+
+/* line 26, ../../resources/sass/_structure.scss */
+header {
+  background: #fff;
+  padding: 10px;
+  color: #000; }
+
+/* MASTHEAD ---------------------*/
+/* line 34, ../../resources/sass/_structure.scss */
+.masthead {
+  display: none;
+  padding: 0 0 50px 0;
+  margin: 0 0 50px 0; }
+
+/* line 40, ../../resources/sass/_structure.scss */
+.masthead.mobile {
+  display: block; }
+
+/* SECTIONS ---------------------*/
+/* line 46, ../../resources/sass/_structure.scss */
+.offices {
+  margin: 0 0 100px 0; }
+  /* line 49, ../../resources/sass/_structure.scss */
+  .offices p {
+    margin: 0 0 40px 0;
+    letter-spacing: 2px;
+    line-height: 20px; }
+
+/* line 57, ../../resources/sass/_structure.scss */
+#contact div {
+  margin: 0 0 100px 0; }
+
+/* OVERLAY --------------------*/
+/* line 64, ../../resources/sass/_structure.scss */
+.overlay {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #000;
+  height: 100%;
+  width: 100%; }
+  /* line 73, ../../resources/sass/_structure.scss */
+  .overlay.active {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s; }
+  /* line 79, ../../resources/sass/_structure.scss */
+  .overlay div {
+    position: relative;
+    top: 50%;
+    width: 500px;
+    height: 320px;
+    margin: -160px auto 0 auto; }
+  /* line 86, ../../resources/sass/_structure.scss */
+  .overlay iframe {
+    display: block;
+    margin: 20px 0 0 0; }
+
 /* HEADER ---------------------------------------------------------------*/
 /* FOOTER ---------------------------------------------------------------*/
 /* MEDIA QUERIES --------------------------------------------------------*/
@@ -51,6 +197,63 @@
 
 -------------------------------------------------------------------------*/
 /* TABLET & SMALLER LAPTOPS ---------------------------------------------*/
+@media screen and (min-width: 768px) {
+  /*-------------------------------------------------------------------------
+  	
+  	TOUCHPOINT FILMS
+  	
+  	TABLET + DESKTOP
+  	-----------------------------------
+  	
+  	- Body & Wrapper
+  	- Header
+  	- Sections
+  
+  -------------------------------------------------------------------------*/
+  /* line 14, ../../resources/sass/mq/tablet/_structure.scss */
+  .mobile {
+    display: none !important; }
+
+  /* BODY & WRAPPER ------------*/
+  /* line 20, ../../resources/sass/mq/tablet/_structure.scss */
+  body {
+    text-align: left; }
+
+  /* line 24, ../../resources/sass/mq/tablet/_structure.scss */
+  section, .masthead {
+    padding: 50px; }
+
+  /* line 28, ../../resources/sass/mq/tablet/_structure.scss */
+  .masthead {
+    display: block; }
+    /* line 31, ../../resources/sass/mq/tablet/_structure.scss */
+    .masthead h2 {
+      text-decoration: none; }
+      /* line 33, ../../resources/sass/mq/tablet/_structure.scss */
+      .masthead h2 span {
+        text-decoration: line-through; }
+    /* line 38, ../../resources/sass/mq/tablet/_structure.scss */
+    .masthead a {
+      margin: 0 20px 0 0; }
+
+  /* HEADER ------------*/
+  /* line 45, ../../resources/sass/mq/tablet/_structure.scss */
+  header {
+    background: transparent;
+    padding: 50px;
+    color: #fff; }
+
+  /* line 51, ../../resources/sass/mq/tablet/_structure.scss */
+  #contact {
+    background: rgba(0, 0, 0, 0.5);
+    overflow: hidden; }
+    /* line 55, ../../resources/sass/mq/tablet/_structure.scss */
+    #contact div {
+      float: left;
+      margin: 0 100px 50px 0; }
+      /* line 59, ../../resources/sass/mq/tablet/_structure.scss */
+      #contact div h3 {
+        margin-top: 0; } }
 /* DESKTOP -------------------------------------------------------------*/
 /* EXTRA LARGE SCREEN --------------------------------------------------*/
 /* PRINT ---------------------------------------------------------------*/
