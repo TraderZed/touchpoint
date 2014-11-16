@@ -201,52 +201,57 @@ header {
   /* BODY & WRAPPER ------------*/
   /* line 20, ../../resources/sass/mq/tablet/_structure.scss */
   body {
-    text-align: left; }
+    text-align: left;
+    overflow-x: hidden; }
 
-  /* line 24, ../../resources/sass/mq/tablet/_structure.scss */
+  /* line 25, ../../resources/sass/mq/tablet/_structure.scss */
   #big-video-wrap {
     display: block; }
 
-  /* line 28, ../../resources/sass/mq/tablet/_structure.scss */
+  /* line 29, ../../resources/sass/mq/tablet/_structure.scss */
   section, .masthead {
     padding: 50px; }
 
-  /* line 32, ../../resources/sass/mq/tablet/_structure.scss */
+  /* line 33, ../../resources/sass/mq/tablet/_structure.scss */
   .masthead {
     display: block; }
-    /* line 35, ../../resources/sass/mq/tablet/_structure.scss */
+    /* line 36, ../../resources/sass/mq/tablet/_structure.scss */
     .masthead h2 {
       text-decoration: none; }
-      /* line 37, ../../resources/sass/mq/tablet/_structure.scss */
+      /* line 38, ../../resources/sass/mq/tablet/_structure.scss */
       .masthead h2 span {
         text-decoration: line-through; }
-    /* line 42, ../../resources/sass/mq/tablet/_structure.scss */
+    /* line 43, ../../resources/sass/mq/tablet/_structure.scss */
     .masthead a {
       margin: 0 20px 0 0; }
 
   /* HEADER ------------*/
-  /* line 49, ../../resources/sass/mq/tablet/_structure.scss */
+  /* line 50, ../../resources/sass/mq/tablet/_structure.scss */
   header {
     background: transparent;
     padding: 50px;
     color: #fff; }
 
-  /* line 55, ../../resources/sass/mq/tablet/_structure.scss */
+  /* line 56, ../../resources/sass/mq/tablet/_structure.scss */
   #contact {
     background: rgba(0, 0, 0, 0.5);
-    padding: 50px 0 0 40px;
+    padding: 50px 0 0 0;
+    width: 100%;
     overflow: hidden; }
-    /* line 60, ../../resources/sass/mq/tablet/_structure.scss */
+    /* line 62, ../../resources/sass/mq/tablet/_structure.scss */
     #contact div {
       float: left;
       margin: 0 10px 50px 10px;
       height: 100px;
       width: 20%; }
-      /* line 66, ../../resources/sass/mq/tablet/_structure.scss */
+      /* line 68, ../../resources/sass/mq/tablet/_structure.scss */
+      #contact div:first-child {
+        padding-left: 40px; }
+      /* line 73, ../../resources/sass/mq/tablet/_structure.scss */
       #contact div h3 {
         margin-top: 0; }
 
-  /* line 72, ../../resources/sass/mq/tablet/_structure.scss */
+  /* line 79, ../../resources/sass/mq/tablet/_structure.scss */
   .overlay {
     display: block;
     visibility: hidden;
@@ -258,19 +263,19 @@ header {
     background: #000;
     height: 100%;
     width: 100%; }
-    /* line 82, ../../resources/sass/mq/tablet/_structure.scss */
+    /* line 89, ../../resources/sass/mq/tablet/_structure.scss */
     .overlay.active {
       visibility: visible;
       opacity: 1;
       transition-delay: 0s; }
-    /* line 88, ../../resources/sass/mq/tablet/_structure.scss */
+    /* line 95, ../../resources/sass/mq/tablet/_structure.scss */
     .overlay div {
       position: relative;
       top: 50%;
       width: 500px;
       height: 320px;
       margin: -160px auto 0 auto; }
-    /* line 95, ../../resources/sass/mq/tablet/_structure.scss */
+    /* line 102, ../../resources/sass/mq/tablet/_structure.scss */
     .overlay iframe {
       display: block;
       margin: 20px 0 0 0; } }

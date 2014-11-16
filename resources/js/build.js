@@ -20,5 +20,23 @@ $(function() {
 	var BV = new $.BigVideo();
     BV.init();
     BV.show('/public/videos/miniloop.mp4',{ambient:true});
+    
+    $(window).on('resize', function() {
+	    if($(window).height() > 781 && isTablet == false && isMobile == false) {
+		    $('#contact').css('position', 'absolute');
+		    $('#contact').css('bottom', 0);
+	    } else {
+		    $('#contact').css('position', 'static');
+	    }
+    });
+    
+    $(window).on('load', function() {
+	    if($(window).height() > 781 && isTablet == false && isMobile == false) {
+		    $('#contact').css('position', 'absolute');
+		    $('#contact').css('bottom', 0);
+	    } else {
+		    $('#contact').css('position', 'static');
+	    }
+    });
 
 });
