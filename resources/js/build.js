@@ -17,5 +17,8 @@ $(function() {
 		$('.overlay').toggleClass('active');
 	});
 
+	var BV = new $.BigVideo();
+    BV.init();
+    BV.show('/public/videos/miniloop.mp4',{ambient:true});
 
 });
