@@ -206,7 +206,7 @@ header {
 
   /* line 25, ../../resources/sass/mq/tablet/_structure.scss */
   #big-video-wrap {
-    display: block; }
+    display: none; }
 
   /* line 29, ../../resources/sass/mq/tablet/_structure.scss */
   section, .masthead {
