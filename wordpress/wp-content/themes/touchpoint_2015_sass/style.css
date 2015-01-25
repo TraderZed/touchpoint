@@ -1,0 +1,73 @@
+@import url(../css/normalize.css);
+/*
+	Theme Name: Touchpoint 2015 - Using HTML5 Blank
+	Theme URI: http://html5blank.com
+	Description: Touchpoint's 2015 redesign - using HTML5 Blank WordPress Theme
+	Version: 1
+	Author: Zack Ginies / Todd Motto (@toddmotto)
+	Author URI: http://zackginies.com / http://toddmotto.com
+	Tags: Blank, HTML5, SASS
+
+	License: MIT
+	License URI: http://opensource.org/licenses/mit-license.php
+*/
+/*-------------------------------------------------------------------------
+	
+	ZACK GINIES SASS PROJECT
+	
+	BASE STYLE IMPORTS
+	-----------------------------------
+	
+	- Normalize
+	- Mixins
+	- Helpers
+	- Core Styles
+	- Structure
+	- Header 
+	- Footer
+	- Media Queries
+	- Retina
+
+-------------------------------------------------------------------------*/
+/* NORMALIZE ------------------------------------------------------------*/
+/* MIXINS ---------------------------------------------------------------*/
+/*-------------------------------------------------------------------------
+	
+	ZACK GINIES SASS PROJECT
+	
+	MIXINS
+	-----------------------------------
+	
+	- Rounded Corners
+	- Box Sizing
+	- Opacity
+
+-------------------------------------------------------------------------*/
+/* HELPERS --------------------------------------------------------------*/
+/* CORE STYLES ----------------------------------------------------------*/
+/* STRUCTURE ------------------------------------------------------------*/
+/* HEADER ---------------------------------------------------------------*/
+/* FOOTER ---------------------------------------------------------------*/
+/* MEDIA QUERIES --------------------------------------------------------*/
+/*-------------------------------------------------------------------------
+	
+	ZACK GINIES SASS PROJECT
+	
+	MEDIA QUERIES
+	-----------------------------------
+	
+	- Tablets & Smaller Laptops
+	- Desktop
+	- Extra Large Screen
+	- Print
+
+-------------------------------------------------------------------------*/
+/* TABLET & SMALLER LAPTOPS ---------------------------------------------*/
+/* DESKTOP -------------------------------------------------------------*/
+/* EXTRA LARGE SCREEN --------------------------------------------------*/
+/* PRINT ---------------------------------------------------------------*/
+@media print {
+  /* Welcome to Compass. Use this file to define print styles.
+   * Import this file using the following HTML or equivalent:
+   * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */ }
+/* RETINA ---------------------------------------------------------------*/

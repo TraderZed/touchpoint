@@ -1,0 +1,78 @@
+/*
+	Theme Name: Touchpoint 2015 - Using HTML5 Blank
+	Theme URI: http://html5blank.com
+	Description: Touchpoint's 2015 redesign - using HTML5 Blank WordPress Theme
+	Version: 1
+	Author: Zack Ginies / Todd Motto (@toddmotto)
+	Author URI: http://zackginies.com / http://toddmotto.com
+	Tags: Blank, HTML5, SASS
+
+	License: MIT
+	License URI: http://opensource.org/licenses/mit-license.php
+*/
+
+/*-------------------------------------------------------------------------
+	
+	ZACK GINIES SASS PROJECT
+	
+	BASE STYLE IMPORTS
+	-----------------------------------
+	
+	- Normalize
+	- Mixins
+	- Helpers
+	- Core Styles
+	- Structure
+	- Header 
+	- Footer
+	- Media Queries
+	- Retina
+
+-------------------------------------------------------------------------*/
+
+/* NORMALIZE ------------------------------------------------------------*/
+
+@import "../css/normalize.css";
+
+
+/* MIXINS ---------------------------------------------------------------*/
+
+@import "_mixins";
+
+
+/* HELPERS --------------------------------------------------------------*/
+
+@import "_helpers";
+
+
+/* CORE STYLES ----------------------------------------------------------*/
+
+@import "core/colors";
+@import "core/fonts";
+@import "core/typography";
+@import "core/buttons";
+
+
+/* STRUCTURE ------------------------------------------------------------*/
+
+@import "_structure";
+
+
+/* HEADER ---------------------------------------------------------------*/
+
+@import "_header";
+
+
+/* FOOTER ---------------------------------------------------------------*/
+
+@import "_footer";
+
+
+/* MEDIA QUERIES --------------------------------------------------------*/
+
+@import "_mq";
+
+
+/* RETINA ---------------------------------------------------------------*/
+
+@import "_retina";
