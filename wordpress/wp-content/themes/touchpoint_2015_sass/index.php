@@ -19,19 +19,22 @@
 		</section><!-- /carousel -->
 		
 		<section id="work">
-  		<header class="work_header">
-  			<h2>Work</h2>
+  		<header class="work_header header">
+  			<h2 class="title">Work</h2>
+  			
+  			<nav>
   			<?php
   			$terms = get_terms( 'video_categories' );
   			 if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
   			     echo '<ul id="category_list">';
   			     foreach ( $terms as $term ) {
-  			       echo '<li class="'. $term->slug .'">' . $term->name . '</li>';
+  			       echo '<li class="'. $term->slug .'"><a href="">' . $term->name . '</a></li>';
   			        
   			     }
   			     echo '</ul>';
   			 }
   			?>
+  			</nav>
   		</header>
 			
 			<?php $video_loop = new WP_Query( array( 'post_type' => 'video', 'posts_per_page' => -1 ) ); ?>
@@ -70,20 +73,22 @@
     			<?php endwhile; wp_reset_query(); ?>
     			</ul>
         </div><!-- /left -->
-
-  		<?php $who_query = new WP_Query( array( 'post_type' => 'people', 'posts_per_page' => -1 ) ); ?>
-  		<?php while ( $who_query->have_posts() ) : $who_query->the_post(); ?>
-			
-			<div class="person">
-  		  <img src="<?php echo get_field( "profile_photo" );?>" alt="<?php the_title(); ?>" />
-				<div class="overlay">
-  				<h3><?php the_title(); ?></h3>
-  				<p><?php echo get_field( "job_title" );?></p>
-        </div><!-- /overlay -->
-			</div>
-			
-			<?php endwhile; wp_reset_query(); ?>
-		</section><!-- /about -->
+        
+        <div class="grid">
+      		<?php $who_query = new WP_Query( array( 'post_type' => 'people', 'posts_per_page' => -1 ) ); ?>
+      		<?php while ( $who_query->have_posts() ) : $who_query->the_post(); ?>
+    			
+    			<div class="person">
+      		  <img src="<?php echo get_field( "profile_photo" );?>" alt="<?php the_title(); ?>" />
+    				<div class="overlay">
+      				<h3><?php the_title(); ?></h3>
+      				<p><?php echo get_field( "job_title" );?></p>
+            </div><!-- /overlay -->
+    			</div>
+    			
+    			<?php endwhile; wp_reset_query(); ?>
+    		</div><!-- /grid -->
+		</section><!-- /who -->
 	</main>
 
 	

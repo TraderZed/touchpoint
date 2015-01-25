@@ -1,0 +1,56 @@
+/*-------------------------------------------------------------------------
+	
+	TOUCHPOINT 2015
+	
+	HEADER STYLES
+	-----------------------------------
+	
+	- Global Headers
+
+-------------------------------------------------------------------------*/
+
+/* Global Headers ------------------------------------------------------------*/
+
+.header {
+  overflow: hidden;
+  padding: 55px 0 40px 0;
+  
+  .title {
+    float: left;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav {
+    float: right;
+    margin: 8px 0 0 0;
+    text-align: right;
+    ul {
+      margin: 0; padding: 0;
+    }
+    li {
+      display: inline;
+      list-style: none;
+      margin: 0 0 0 80px;
+      text-transform: uppercase;
+      &:first-child {
+        margin: 0;
+      }
+      a {
+        color: $white;
+        padding: 10px;
+      }
+    }
+  }
+  &.main_header {
+    background: $white;
+    
+    nav {
+      li {
+        a {
+          color: $black;
+        }
+      }
+    }
+  }
+}

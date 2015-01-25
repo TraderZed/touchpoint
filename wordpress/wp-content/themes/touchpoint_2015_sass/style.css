@@ -1,5 +1,6 @@
 @import url(resources/css/normalize.css);
 @import url(resources/css/html5blank.css);
+@import url("http://fonts.googleapis.com/css?family=Fjalla+One");
 /*
 	Theme Name: Touchpoint 2015 - Using HTML5 Blank
 	Theme URI: http://html5blank.com
@@ -14,7 +15,7 @@
 */
 /*-------------------------------------------------------------------------
 	
-	ZACK GINIES SASS PROJECT
+	TOUCHPOINT 2015
 	
 	BASE STYLE IMPORTS
 	-----------------------------------
@@ -46,8 +47,87 @@
 -------------------------------------------------------------------------*/
 /* HELPERS --------------------------------------------------------------*/
 /* CORE STYLES ----------------------------------------------------------*/
+/* line 1, resources/sass/core/_typography.scss */
+h2 {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 24px;
+  letter-spacing: .3em;
+  text-decoration: line-through;
+  text-transform: uppercase; }
+
 /* STRUCTURE ------------------------------------------------------------*/
+/*-------------------------------------------------------------------------
+	
+	TOUCHPOINT 2015
+	
+	BASE STRUCTURE (MOBILE FIRST)
+	-----------------------------------
+	
+	- Body & Wrapper
+
+-------------------------------------------------------------------------*/
+/* BODY & WRAPPER -------------------------------------------------------*/
+/* line 14, resources/sass/_structure.scss */
+body {
+  background: black;
+  color: white;
+  font-family: "Courier", sans-serif;
+  font-size: 12px; }
+
+/* line 21, resources/sass/_structure.scss */
+section {
+  overflow: hidden; }
+
 /* HEADER ---------------------------------------------------------------*/
+/*-------------------------------------------------------------------------
+	
+	TOUCHPOINT 2015
+	
+	HEADER STYLES
+	-----------------------------------
+	
+	- Global Headers
+
+-------------------------------------------------------------------------*/
+/* Global Headers ------------------------------------------------------------*/
+/* line 14, resources/sass/_header.scss */
+.header {
+  overflow: hidden;
+  padding: 55px 0 40px 0; }
+  /* line 18, resources/sass/_header.scss */
+  .header .title {
+    float: left;
+    margin: 0;
+    padding: 0; }
+  /* line 24, resources/sass/_header.scss */
+  .header nav {
+    float: right;
+    margin: 8px 0 0 0;
+    text-align: right; }
+    /* line 28, resources/sass/_header.scss */
+    .header nav ul {
+      margin: 0;
+      padding: 0; }
+    /* line 31, resources/sass/_header.scss */
+    .header nav li {
+      display: inline;
+      list-style: none;
+      margin: 0 0 0 80px;
+      text-transform: uppercase; }
+      /* line 36, resources/sass/_header.scss */
+      .header nav li:first-child {
+        margin: 0; }
+      /* line 39, resources/sass/_header.scss */
+      .header nav li a {
+        color: white;
+        padding: 10px; }
+  /* line 45, resources/sass/_header.scss */
+  .header.main_header {
+    background: white; }
+    /* line 50, resources/sass/_header.scss */
+    .header.main_header nav li a {
+      color: black; }
+
 /* FOOTER ---------------------------------------------------------------*/
 /* MEDIA QUERIES --------------------------------------------------------*/
 /*-------------------------------------------------------------------------
@@ -64,6 +144,51 @@
 
 -------------------------------------------------------------------------*/
 /* TABLET & SMALLER LAPTOPS ---------------------------------------------*/
+@media screen and (min-width: 768px) {
+  /*-------------------------------------------------------------------------
+  	
+  	TOUCHPOINT 2015
+  	
+  	TABLET STRUCTURE
+  	-----------------------------------
+  	
+  	- Who Section
+  
+  -------------------------------------------------------------------------*/
+  /* WHO SECTION ------------------------------------------------------------*/
+  /* line 15, resources/sass/mq/tablet/_structure.scss */
+  #who h2 {
+    font-size: 48px; }
+  /* line 18, resources/sass/mq/tablet/_structure.scss */
+  #who .left {
+    float: left;
+    padding: 0 50px 0 0;
+    width: 390px; }
+  /* line 23, resources/sass/mq/tablet/_structure.scss */
+  #who .grid {
+    float: right;
+    overflow: hidden;
+    width: 890px; }
+    /* line 27, resources/sass/mq/tablet/_structure.scss */
+    #who .grid .person {
+      float: left;
+      position: relative; }
+      /* line 30, resources/sass/mq/tablet/_structure.scss */
+      #who .grid .person .overlay {
+        opacity: 0;
+        background: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        left: 0;
+        top: 0;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        transition: opacity .25s ease-in-out;
+        -moz-transition: opacity .25s ease-in-out;
+        -webkit-transition: opacity .25s ease-in-out; }
+        /* line 39, resources/sass/mq/tablet/_structure.scss */
+        #who .grid .person .overlay:hover {
+          opacity: 1; } }
 /* DESKTOP -------------------------------------------------------------*/
 /* EXTRA LARGE SCREEN --------------------------------------------------*/
 /* PRINT ---------------------------------------------------------------*/
