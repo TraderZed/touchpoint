@@ -43,6 +43,7 @@
 	- Rounded Corners
 	- Box Sizing
 	- Opacity
+	- Vertical Align
 
 -------------------------------------------------------------------------*/
 /* HELPERS --------------------------------------------------------------*/
@@ -54,6 +55,10 @@ h2 {
   letter-spacing: .3em;
   text-decoration: line-through;
   text-transform: uppercase; }
+
+/* line 9, resources/sass/core/_typography.scss */
+p {
+  margin-bottom: 40px; }
 
 /* STRUCTURE ------------------------------------------------------------*/
 /*-------------------------------------------------------------------------
@@ -152,43 +157,158 @@ section {
   	TABLET STRUCTURE
   	-----------------------------------
   	
+  	- Work Section
   	- Who Section
   
   -------------------------------------------------------------------------*/
-  /* WHO SECTION ------------------------------------------------------------*/
+  /* WORK SECTION ------------------------------------------------------------*/
   /* line 15, resources/sass/mq/tablet/_structure.scss */
-  #who h2 {
-    font-size: 48px; }
-  /* line 18, resources/sass/mq/tablet/_structure.scss */
-  #who .left {
-    float: left;
-    padding: 0 50px 0 0;
-    width: 390px; }
-  /* line 23, resources/sass/mq/tablet/_structure.scss */
-  #who .grid {
-    float: right;
-    overflow: hidden;
-    width: 890px; }
-    /* line 27, resources/sass/mq/tablet/_structure.scss */
-    #who .grid .person {
+  #work {
+    padding: 0 0 20px 0; }
+    /* line 17, resources/sass/mq/tablet/_structure.scss */
+    #work .video {
       float: left;
-      position: relative; }
-      /* line 30, resources/sass/mq/tablet/_structure.scss */
-      #who .grid .person .overlay {
+      position: relative;
+      width: 426px;
+      height: 250px;
+      overflow: hidden; }
+      /* line 22, resources/sass/mq/tablet/_structure.scss */
+      #work .video img {
+        height: 100%;
+        width: 100%; }
+      /* line 26, resources/sass/mq/tablet/_structure.scss */
+      #work .video .overlay {
         opacity: 0;
-        background: rgba(0, 0, 0, 0.5);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        filter: alpha(opacity=0);
+        background: rgba(0, 0, 0, 0.6);
+        font-size: 14px;
+        padding: 20px;
         position: absolute;
         left: 0;
         top: 0;
         text-align: center;
+        text-transform: uppercase;
         width: 100%;
         height: 100%;
         transition: opacity .25s ease-in-out;
         -moz-transition: opacity .25s ease-in-out;
         -webkit-transition: opacity .25s ease-in-out; }
-        /* line 39, resources/sass/mq/tablet/_structure.scss */
-        #who .grid .person .overlay:hover {
-          opacity: 1; } }
+        /* line 38, resources/sass/mq/tablet/_structure.scss */
+        #work .video .overlay:hover {
+          opacity: 1;
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+          filter: alpha(opacity=100); }
+        /* line 41, resources/sass/mq/tablet/_structure.scss */
+        #work .video .overlay h3 {
+          margin: 0; }
+        /* line 44, resources/sass/mq/tablet/_structure.scss */
+        #work .video .overlay p {
+          font-size: 12px;
+          margin: 0; }
+        /* line 48, resources/sass/mq/tablet/_structure.scss */
+        #work .video .overlay .inner {
+          position: relative;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }
+
+  /* line 56, resources/sass/mq/tablet/_structure.scss */
+  #about {
+    background: #dddddd;
+    color: black;
+    padding: 55px 0; }
+    /* line 60, resources/sass/mq/tablet/_structure.scss */
+    #about .about_intro {
+      font-family: "Fjalla One", sans-serif;
+      font-size: 48px;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      width: 750px; }
+      /* line 66, resources/sass/mq/tablet/_structure.scss */
+      #about .about_intro span {
+        display: block;
+        font-size: 12px;
+        font-family: "Courier", sans-serif;
+        letter-spacing: .2em; }
+
+  /* WHO SECTION ------------------------------------------------------------*/
+  /* line 77, resources/sass/mq/tablet/_structure.scss */
+  #who {
+    padding: 100px 0 0 0; }
+    /* line 79, resources/sass/mq/tablet/_structure.scss */
+    #who h2 {
+      font-size: 48px;
+      letter-spacing: .4em;
+      width: 50%; }
+    /* line 84, resources/sass/mq/tablet/_structure.scss */
+    #who .left {
+      float: left;
+      padding: 0 50px 0 0;
+      width: 390px; }
+      /* line 88, resources/sass/mq/tablet/_structure.scss */
+      #who .left p {
+        line-height: 30px; }
+      /* line 91, resources/sass/mq/tablet/_structure.scss */
+      #who .left ul {
+        list-style: none;
+        margin: 0;
+        padding: 0; }
+        /* line 94, resources/sass/mq/tablet/_structure.scss */
+        #who .left ul li {
+          margin: 0 0 20px 0; }
+    /* line 99, resources/sass/mq/tablet/_structure.scss */
+    #who .grid {
+      float: right;
+      overflow: hidden;
+      width: 890px; }
+      /* line 103, resources/sass/mq/tablet/_structure.scss */
+      #who .grid .person {
+        float: left;
+        position: relative;
+        width: 222px;
+        height: 250px; }
+        /* line 107, resources/sass/mq/tablet/_structure.scss */
+        #who .grid .person.vip {
+          width: 445px; }
+        /* line 110, resources/sass/mq/tablet/_structure.scss */
+        #who .grid .person .overlay {
+          opacity: 0;
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+          filter: alpha(opacity=0);
+          background: rgba(0, 0, 0, 0.6);
+          font-size: 14px;
+          padding: 20px;
+          position: absolute;
+          left: 0;
+          top: 0;
+          text-align: center;
+          text-transform: uppercase;
+          width: 100%;
+          height: 100%;
+          transition: opacity .25s ease-in-out;
+          -moz-transition: opacity .25s ease-in-out;
+          -webkit-transition: opacity .25s ease-in-out; }
+          /* line 122, resources/sass/mq/tablet/_structure.scss */
+          #who .grid .person .overlay:hover {
+            opacity: 1;
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+            filter: alpha(opacity=100); }
+          /* line 125, resources/sass/mq/tablet/_structure.scss */
+          #who .grid .person .overlay h3 {
+            margin: 0; }
+          /* line 128, resources/sass/mq/tablet/_structure.scss */
+          #who .grid .person .overlay p {
+            font-size: 12px;
+            margin: 0; }
+          /* line 132, resources/sass/mq/tablet/_structure.scss */
+          #who .grid .person .overlay .inner {
+            position: relative;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%); } }
 /* DESKTOP -------------------------------------------------------------*/
 /* EXTRA LARGE SCREEN --------------------------------------------------*/
 /* PRINT ---------------------------------------------------------------*/

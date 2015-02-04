@@ -44,8 +44,3 @@
       </div><!-- /wrapper -->
 		</header>
 		<!-- /header -->
-		
-		<!-- wrapper -->
-		<div class="wrapper">
-
-			

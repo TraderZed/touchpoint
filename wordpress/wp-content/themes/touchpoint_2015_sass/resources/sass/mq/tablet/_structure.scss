@@ -5,20 +5,96 @@
 	TABLET STRUCTURE
 	-----------------------------------
 	
+	- Work Section
 	- Who Section
 
 -------------------------------------------------------------------------*/
 
+/* WORK SECTION ------------------------------------------------------------*/ 
+
+#work {
+  padding: 0 0 20px 0;
+  .video {
+    float: left;
+    position: relative;
+    width: 426px; height: 250px;
+    overflow: hidden;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+    .overlay {
+      @include opacity(0);
+      background: rgba(0,0,0,.6);
+      font-size: 14px;
+      padding: 20px;
+      position: absolute; left: 0; top: 0; 
+      text-align: center;
+      text-transform: uppercase;
+      width: 100%; height: 100%;
+      transition: opacity .25s ease-in-out;
+      -moz-transition: opacity .25s ease-in-out;
+      -webkit-transition: opacity .25s ease-in-out;
+      &:hover {
+        @include opacity(1);
+      }
+      h3 {
+        margin: 0;
+      }
+      p {
+        font-size: 12px;
+        margin: 0;
+      }
+      .inner {
+        @include vertical-align;
+      }
+    }
+  }
+  
+}
+
+#about {
+  background: $cool-grey;
+  color: $black;
+  padding: 55px 0;
+  .about_intro {
+    font-family: $fjalla;
+    font-size: 48px;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    width: 750px;
+    span {
+      display: block;
+      font-size: 12px;
+      font-family: $courier;
+      letter-spacing: .2em;
+    }
+  }
+}
+
 /* WHO SECTION ------------------------------------------------------------*/
 
 #who {
+  padding: 100px 0 0 0;
   h2 {
     font-size: 48px;
+    letter-spacing: .4em;
+    width: 50%;
   }
   .left {
     float: left;
     padding: 0 50px 0 0;
     width: 390px;
+    p {
+      line-height: 30px;
+    }
+    ul {
+      list-style: none;
+      margin: 0; padding: 0;
+      li {
+        margin: 0 0 20px 0;
+      }
+    }
   }
   .grid {
     float: right;
@@ -27,17 +103,34 @@
     .person {
       float: left;
       position: relative;
+      width: 222px; height: 250px;
+      &.vip {
+        width: 445px;
+      }
       .overlay {
-        opacity: 0;
-        background: rgba(0,0,0,.5);
+        @include opacity(0);
+        background: rgba(0,0,0,.6);
+        font-size: 14px;
+        padding: 20px;
         position: absolute; left: 0; top: 0; 
         text-align: center;
+        text-transform: uppercase;
         width: 100%; height: 100%;
         transition: opacity .25s ease-in-out;
         -moz-transition: opacity .25s ease-in-out;
         -webkit-transition: opacity .25s ease-in-out;
         &:hover {
-          opacity: 1;
+          @include opacity(1);
+        }
+        h3 {
+          margin: 0;
+        }
+        p {
+          font-size: 12px;
+          margin: 0;
+        }
+        .inner {
+          @include vertical-align;
         }
       }
     }

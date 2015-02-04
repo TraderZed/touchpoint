@@ -8,6 +8,7 @@
 	- Rounded Corners
 	- Box Sizing
 	- Opacity
+	- Vertical Align
 
 -------------------------------------------------------------------------*/
 
@@ -31,4 +32,12 @@
   opacity: $value;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
   filter: alpha(opacity=$IEValue);
+}
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
