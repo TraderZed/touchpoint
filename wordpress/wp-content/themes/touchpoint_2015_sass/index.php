@@ -114,12 +114,14 @@
       		<?php while ( $who_query->have_posts() ) : $who_query->the_post(); ?>
     			
     			<div class="person vip">
-      		  <img src="<?php echo get_field( "profile_photo" );?>" alt="<?php the_title(); ?>" />
+      		  <img src="<?php echo get_field( "vip_photo" );?>" alt="<?php the_title(); ?>" />
     				<div class="overlay">
-      				<div class="inner">
-        				<h3><?php the_title(); ?></h3>
-        				<p><?php echo get_field( "job_title" );?></p>
-              </div><!-- /inner -->
+      				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+        				<div class="inner">
+          				<h3><?php the_title(); ?></h3>
+          				<p><?php echo get_field( "job_title" );?></p>
+                </div><!-- /inner -->
+              </a>
             </div><!-- /overlay -->
     			</div>
     			
@@ -131,10 +133,12 @@
     			<div class="person">
       		  <img src="<?php echo get_field( "profile_photo" );?>" alt="<?php the_title(); ?>" />
     				<div class="overlay">
-      				<div class="inner">
-        				<h3><?php the_title(); ?></h3>
-        				<p><?php echo get_field( "job_title" );?></p>
-              </div><!-- /inner -->
+      			  <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+        				<div class="inner">
+          				<h3><?php the_title(); ?></h3>
+          				<p><?php echo get_field( "job_title" );?></p>
+                </div><!-- /inner -->
+              </a>
             </div><!-- /overlay -->
     			</div>
     			
@@ -143,7 +147,5 @@
       </div><!-- /wrapper -->
 		</section><!-- /who -->
 	</main>
-
-	
 	
 <?php get_footer(); ?>

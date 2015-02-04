@@ -16,7 +16,7 @@
   padding: 0 0 20px 0;
   .video {
     float: left;
-    position: relative;
+    position: relative; 
     width: 426px; height: 250px;
     overflow: hidden;
     img {
@@ -111,7 +111,6 @@
         @include opacity(0);
         background: rgba(0,0,0,.6);
         font-size: 14px;
-        padding: 20px;
         position: absolute; left: 0; top: 0; 
         text-align: center;
         text-transform: uppercase;
@@ -121,6 +120,12 @@
         -webkit-transition: opacity .25s ease-in-out;
         &:hover {
           @include opacity(1);
+        }
+        a {
+          color: $white;
+          display: block;
+          height: 100%; width: 100%;
+          padding: 20px;
         }
         h3 {
           margin: 0;
@@ -132,6 +137,19 @@
         .inner {
           @include vertical-align;
         }
+      }
+    }
+  }
+  &.full {
+    h2 {
+      font-size: 24px;
+    }
+    .grid {
+      float: none;
+      width: 100%;
+      
+      .person {
+        height: 239px; width: 213px;
       }
     }
   }

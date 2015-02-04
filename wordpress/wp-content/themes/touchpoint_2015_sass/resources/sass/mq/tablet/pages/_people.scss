@@ -1,0 +1,77 @@
+/*-------------------------------------------------------------------------
+	
+	TOUCHPOINT 2015
+	
+	TABLET STRUCTURE - PEOPLE
+	-----------------------------------
+	
+	- Masthead
+	- Biography
+	- Work
+
+-------------------------------------------------------------------------*/
+
+.single-people {
+
+/* MASTHEAD -----------------------------*/
+
+#masthead { 
+  background-position: center center;
+  background-size: cover;
+  height: 500px;
+  
+  h2 {
+    font-size: 72px;
+    margin: 0;
+  }
+  
+  h3 {
+    font-family: $fjalla;
+    font-size: 24px;
+    letter-spacing: .3em;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  
+  .wrapper {
+    height: 100%;
+  }
+  
+  .copy {
+    position: absolute; left: 0; bottom: 40px;
+  }
+}
+
+/* BIOGRAPHY -----------------------------*/
+
+#bio {
+  background: $white;
+  color: $black;
+  padding: 40px 20px;
+  
+  p {
+    line-height: 2em;
+    padding-right: 500px;
+  }
+}
+
+/* WORK -----------------------------*/
+
+#work {
+  background: $white;
+  color: $black;
+  padding: 40px 20px 70px 20px;
+  
+  .overlay {
+    color: $white;
+  }
+}
+
+/* ROSTER -----------------------------*/
+
+#who {
+  padding: 40px 20px;
+}
+
+
+}
