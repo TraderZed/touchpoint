@@ -14,7 +14,7 @@
     			<div class="video carousel-item">
     				<h2><?php the_title(); ?></h2>
     				<p><?php echo get_field( "carousel_description", get_the_ID() ); ?></p>
-    				<a href="javascript: void(0);" title="Watch" class="btn_watch button js-show-video">Watch</a>
+    				<a href="javascript: void(0);" title="Watch" class="btn_watch button js-show-video"data-video-title="<?php the_title(); ?>" data-vimeo-id="<?php echo get_field( "vimeo_id" );?>" data-video-description="<?php echo get_field( "video_description" );?>">Watch</a>
     			</div>
     		</li>
   			<?php } ?>  			
