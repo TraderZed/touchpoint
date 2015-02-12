@@ -1,21 +1,28 @@
 <?php get_header(); ?>
-
+  
 	<main role="main">
 		<section id="carousel">
-			<?php $loop = new WP_Query( array( 'post_type' => 'video', 'posts_per_page' => -1 ) ); ?>
-			<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-			<?php
-			$value = get_field( "carousel", get_the_ID() );
-			if( $value )
-			{?>
-			<div class="video carousel-item">
-				<h2><?php the_title(); ?></h2>
-				<p><?php echo get_field( "video_description", get_the_ID() ); ?></p>
-			</div>
-			<?php } ?>
-			
-			
-			<?php endwhile; wp_reset_query(); ?>
+			<div class="jcarousel">
+  		  <ul>
+  			<?php $loop = new WP_Query( array( 'post_type' => 'video', 'posts_per_page' => -1 ) ); ?>
+  			<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+  			<?php
+  			$value = get_field( "carousel", get_the_ID() );
+  			if( $value )
+  			{?>
+        <li>
+    			<div class="video carousel-item">
+    				<h2><?php the_title(); ?></h2>
+    				<p><?php echo get_field( "carousel_description", get_the_ID() ); ?></p>
+    				<a href="javascript: void(0);" title="Watch" class="btn_watch button js-show-video">Watch</a>
+    			</div>
+    		</li>
+  			<?php } ?>  			
+  			<?php endwhile; wp_reset_query(); ?>
+			  </ul>
+			</div><!-- /jcarousel -->
+
+      <div class="jcarousel-pagination"></div>
 		</section><!-- /carousel -->
 		
 		<section id="work">
@@ -27,10 +34,10 @@
     			<?php
     			$terms = get_terms( 'video_categories' );
     			 if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
-    			     echo '<ul id="category_list">';
+    			     echo '<ul class="category_list">';
+    			     echo '<li><a href="javascript: void(0);" data-category="all" class="js-video-category active">All</a></li>';
     			     foreach ( $terms as $term ) {
-    			       echo '<li class="'. $term->slug .'"><a href="">' . $term->name . '</a></li>';
-    			        
+    			       echo '<li><a href="javascript: void(0);" data-category="'. $term->slug .' " class="js-video-category">' . $term->name . '</a></li>';
     			     }
     			     echo '</ul>';
     			 }
@@ -41,7 +48,7 @@
   			<?php $video_loop = new WP_Query( array( 'post_type' => 'video', 'posts_per_page' => -1 ) ); ?>
   			<?php while ( $video_loop->have_posts() ) : $video_loop->the_post(); ?>
   			
-  			<div class="video <?php foreach(get_the_terms(get_the_ID(), 'video_categories') as $term) echo $term->slug . " "; ?>">
+  			<div data-video-title="<?php the_title(); ?>" data-vimeo-id="<?php echo get_field( "vimeo_id" );?>" data-video-description="<?php echo get_field( "video_description" );?>" class="video js-show-video active <?php foreach(get_the_terms(get_the_ID(), 'video_categories') as $term) echo $term->slug . " "; ?>">
   				<img src="<?php echo get_field( "video_preview" );?>"/>
   				<div class="overlay">
     				<div class="inner">

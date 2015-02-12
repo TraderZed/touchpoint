@@ -1,0 +1,13 @@
+.button {
+	padding: 10px 40px;
+	border: 2px solid #fff;
+	font-size: 25px;
+	font-family: 'Fjalla One', sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 4px;
+	color: #fff;
+	&:hover {
+  	color: #fff;
+	}
+}

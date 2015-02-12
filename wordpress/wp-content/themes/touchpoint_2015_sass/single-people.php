@@ -26,7 +26,7 @@
         <?php $video_loop = new WP_Query( array( 'post_type' => 'video', 'posts_per_page' => -1 ) ); ?>
   			<?php while ( $video_loop->have_posts() ) : $video_loop->the_post(); ?>
   			
-  			<div class="video <?php foreach(get_the_terms(get_the_ID(), 'video_categories') as $term) echo $term->slug . " "; ?>">
+  			<div data-video-title="<?php the_title(); ?>" data-vimeo-id="<?php echo get_field( "vimeo_id" );?>" data-video-description="<?php echo get_field( "video_description" );?>" class="video js-show-video active <?php foreach(get_the_terms(get_the_ID(), 'video_categories') as $term) echo $term->slug . " "; ?>">
   				<img src="<?php echo get_field( "video_preview" );?>"/>
   				<div class="overlay">
     				<div class="inner">

@@ -14,15 +14,15 @@
 
 		<?php wp_head(); ?>
 		<script>
-        // conditionizr.com
-        // configure environment tests
-        conditionizr.config({
-            assets: '<?php echo get_template_directory_uri(); ?>',
-            tests: {}
-        });
-        </script>
-
+      // conditionizr.com
+      // configure environment tests
+      conditionizr.config({
+          assets: '<?php echo get_template_directory_uri(); ?>',
+          tests: {}
+      });
+      </script>
 	</head>
+	
 	<body <?php body_class(); ?>>
     <!-- header -->
 		<header class="main_header header clear" role="banner">
@@ -44,3 +44,10 @@
       </div><!-- /wrapper -->
 		</header>
 		<!-- /header -->
+		
+		<div class="video_overlay">
+      <a href="javascript: void(0);" class="button js-close-video">Back</a>
+      <h4>Video Title</h4>
+      <iframe src="//player.vimeo.com/video/58045362?autoplay=0&color=3e3f40&title=0&byline=0&portrait=0" width="960" height="409" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <p>Video description</p>
+    </div><!-- /video_overlay -->
