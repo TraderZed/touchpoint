@@ -65,7 +65,7 @@
 		<section id="about">
   		<div class="wrapper">
         <h2><?php echo get_the_title(35); ?></h2>
-        <h3 class="about_intro">We are a creative production company specializing in: <span>online, social, broadcast, corporate, motion</span></h3>
+        <h3 class="about_intro">We're a boutique production company with a pretty simple approach. <span>Hire the best people.</span></h3>
       </div><!-- /wrapper -->
 		</section><!-- /about -->
 		
@@ -153,6 +153,49 @@
     		</div><!-- /grid -->
       </div><!-- /wrapper -->
 		</section><!-- /who -->
+		
+		<section id="contact">
+  		<div class="wrapper">
+        <h2><?php echo get_the_title(37); ?></h2>
+        
+        <div class="left">
+          <?php
+          $vip_args = array(
+          'posts_per_page' => -1,
+          'post_status'=>'publish',
+          'post_type' => 'people',
+          'meta_query' => array(
+              array(
+                  'key' => 'show_contact_info',
+                  'value' => 1,
+                  'compare' => 'IN',
+              )
+          ));
+          ?>
+          
+          <?php $who_query = new WP_Query( $vip_args ); ?>
+      		<?php while ( $who_query->have_posts() ) : $who_query->the_post(); ?>
+    			
+    			<div class="person">
+    				<h3><?php the_title(); ?></h3>
+    				<p><?php echo get_field( "job_title" );?></p>
+    				<p class="phone"><?php echo get_field( "phone_number" );?></p>
+    			</div>
+    			
+    			<?php endwhile; wp_reset_query(); ?>
+        </div><!-- /left -->
+        
+        <div class="right">
+          <h3>Offices</h3>
+          <p>165 John street, 3rd Floor, Toronto, ON M5T 1x3</p>
+          <a href="https://www.google.ca/maps/place/165+John+St,+Toronto,+ON+M5T+1X3/@43.6504154,-79.3910843,17z" title="Map" class="button" target="_blank">Map</a>
+          
+          <h3>Email Us</h3>
+          <p>Send us a message</p>
+          <a href="mailto: info@touchpointfilms.com" title="Send us a message" class="email">info@touchpointfilms.com</a>
+        </div><!-- /right -->
+      </div><!-- /wrapper -->
+		</section><!-- /about -->
 	</main>
 	
 <?php get_footer(); ?>

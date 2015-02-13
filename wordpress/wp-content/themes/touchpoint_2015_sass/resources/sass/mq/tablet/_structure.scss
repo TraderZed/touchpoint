@@ -10,6 +10,10 @@
 
 -------------------------------------------------------------------------*/
 
+.wrapper {
+  width: 1280px;
+}
+
 #carousel {
   position: relative;
   min-height: 550px;
@@ -22,7 +26,7 @@
   
   p {
     line-height: 30px;
-    padding: 0 400px;
+    padding: 0 350px;
   }
 
   /*
@@ -59,6 +63,7 @@
       /* Required only for block elements like <li>'s */
       float: left;
       min-height: 550px;
+      min-width: 1280px;
       padding: 0 100px;
       
   }
@@ -88,6 +93,7 @@
   background: $black;
   height: 100%;
   width: 100%;
+  overflow-y: scroll;
   padding: 50px;
   position: fixed; left: 0; top: 0;
   z-index: 100;
@@ -262,6 +268,45 @@
       .person {
         height: 239px; width: 213px;
       }
+    }
+  }
+}
+
+/* CONTACT SECTION ------------------------------------------------------------*/
+
+#contact {
+  padding: 65px 0;
+  h2 {
+    margin-bottom: 100px;  
+  }
+  
+  h3, .phone {
+    font-family: $fjalla;
+    font-size: 24px;
+    letter-spacing: .3em;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  
+  .phone {
+    margin-bottom: 120px;
+  }
+  
+  .left {
+    float: left;
+    width: 325px;
+  }
+  .right {
+    margin: 0 0 0 345px;
+    .button {
+      display: inline-block;
+      margin-bottom: 94px;
+    }
+    .email {
+      color: $white;
+      font-family: $fjalla;
+      font-size: 18px;
+      letter-spacing: .3em;
     }
   }
 }
