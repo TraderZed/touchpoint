@@ -10,8 +10,8 @@
   			$value = get_field( "carousel", get_the_ID() );
   			if( $value )
   			{?>
-        <li>
-    			<div class="video carousel-item">
+        <li class="video carousel-item" data-video="<?php echo get_field( "carousel_preview", get_the_ID() ); ?>">
+    			<div>
     				<h2><?php the_title(); ?></h2>
     				<p><?php echo get_field( "carousel_description", get_the_ID() ); ?></p>
     				<a href="javascript: void(0);" title="Watch" class="btn_watch button js-show-video"data-video-title="<?php the_title(); ?>" data-vimeo-id="<?php echo get_field( "vimeo_id" );?>" data-video-description="<?php echo get_field( "video_description" );?>">Watch</a>
@@ -44,8 +44,20 @@
     			?>
     			</nav>
     		</header>
-  			
-  			<?php $video_loop = new WP_Query( array( 'post_type' => 'video', 'posts_per_page' => -1 ) ); ?>
+  			<?php
+    		$video_args = array(
+        'posts_per_page' => -1,
+        'post_status'=>'publish',
+        'post_type' => 'video',
+        'meta_query' => array(
+            array(
+                'key' => 'include_in_work_section',
+                'value' => 1,
+                'compare' => 'IN',
+            )
+        ));	
+    		?>
+  			<?php $video_loop = new WP_Query( $video_args ); ?>
   			<?php while ( $video_loop->have_posts() ) : $video_loop->the_post(); ?>
   			
   			<div data-video-title="<?php the_title(); ?>" data-vimeo-id="<?php echo get_field( "vimeo_id" );?>" data-video-description="<?php echo get_field( "video_description" );?>" class="video js-show-video active <?php foreach(get_the_terms(get_the_ID(), 'video_categories') as $term) echo $term->slug . " "; ?>">

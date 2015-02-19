@@ -5,36 +5,12 @@
 		'use strict';
 		
 		// DOM ready, take it away
-		$('.jcarousel')
-    .on('jcarousel:create jcarousel:reload', function() {
-        var element = $(this),
-            width = element.innerWidth();
-        element.jcarousel('items').css('width', width + 'px');
-    })
-    .jcarousel({
-      wrap: 'both',
-      itemVisibleInCallback: {
-        onAfterAnimation: function(c, o, i, s) {
-        --i;
-          jQuery('.jcarousel-pagination a').removeClass('active').addClass('inactive');
-          jQuery('.jcarousel-pagination a:eq('+i+')').removeClass('inactive').addClass('active');
-        }
-      }
-    });
-    
-    $('.jcarousel-pagination').jcarouselPagination({
-        item: function(page) {
-            return '<a href="javascript: void(0);">' + page + '</a>';
-        }
-    });
-    $('.jcarousel-pagination')
-      .on('jcarouselpagination:active', 'a', function() {
-          $(this).addClass('active');
-      })
-      .on('jcarouselpagination:inactive', 'a', function() {
-          $(this).removeClass('active');
-      });
+		
+		initCarousel();
+		
 		$('.video_overlay').fitVids();
+  	
+  	// Event city!
   	
   	$('body').on('click', '.js-show-video', function(e) {
     	e.preventDefault();
@@ -78,7 +54,59 @@
   	if(cat == 'all') {
   	  $('#work').find('.video').addClass('active');
   	}
-  	
+	}
+	
+	var setupCarouselVideos = function() {
+      BV = new $.BigVideo({
+        useFlashForFirefox:true,
+        forceAutoplay:false,
+        controls:false,
+        doLoop:false,
+        container:$('.jcarousel li').first(), //Container
+        shrinkable:false
+      });
+      BV.init();
+      BV.show($('.jcarousel .carousel-item').first().data('video'), {ambient: true});
+    
+  	$.each($('.jcarousel li'), function(i, elem) {
+    	console.log(elem)
+      
+
+  	})
+	}
+	
+	var initCarousel = function() {
+  	$('.jcarousel')
+    .on('jcarousel:create jcarousel:reload', function() {
+        var element = $(this),
+            width = element.innerWidth();
+        element.jcarousel('items').css('width', width + 'px');
+    })
+    .jcarousel({
+      wrap: 'both',
+      itemVisibleInCallback: {
+        onAfterAnimation: function(c, o, i, s) {
+        --i;
+          jQuery('.jcarousel-pagination a').removeClass('active').addClass('inactive');
+          jQuery('.jcarousel-pagination a:eq('+i+')').removeClass('inactive').addClass('active');
+        }
+      }
+    });
+    
+    $('.jcarousel-pagination').jcarouselPagination({
+        item: function(page) {
+            return '<a href="javascript: void(0);">' + page + '</a>';
+        }
+    });
+    $('.jcarousel-pagination')
+      .on('jcarouselpagination:active', 'a', function() {
+          $(this).addClass('active');
+      })
+      .on('jcarouselpagination:inactive', 'a', function() {
+          $(this).removeClass('active');
+      });
+      
+    setupCarouselVideos();
 	}
 	
   videoOverlay = {

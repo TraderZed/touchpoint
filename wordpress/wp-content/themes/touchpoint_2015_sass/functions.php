@@ -104,6 +104,12 @@ function html5blank_header_scripts()
         wp_register_script('fitvids', get_template_directory_uri() . '/resources/js/vendor/jquery.fitvids.js', array('jquery'), ''); // fitvids
         wp_enqueue_script('fitvids'); // Enqueue it!
         
+        wp_register_script('videojs', get_template_directory_uri() . '/resources/js/vendor/jquery.video.js', array('jquery'), ''); // videojs
+        wp_enqueue_script('videojs'); // Enqueue it!
+        
+        wp_register_script('bigvideo', get_template_directory_uri() . '/resources/js/vendor/jquery.bigvideo.js', array('jquery'), ''); // bigvideo
+        wp_enqueue_script('bigvideo'); // Enqueue it!
+        
         wp_register_script('html5blankscripts', get_template_directory_uri() . '/resources/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
         wp_enqueue_script('html5blankscripts'); // Enqueue it!
         

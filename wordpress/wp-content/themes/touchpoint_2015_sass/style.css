@@ -1,5 +1,7 @@
 @import url(resources/css/normalize.css);
 @import url(resources/css/html5blank.css);
+@import url(resources/css/video-js.css);
+@import url(resources/css/bigvideo.css);
 @import url("http://fonts.googleapis.com/css?family=Fjalla+One");
 /*
 	Theme Name: Touchpoint 2015 - Using HTML5 Blank
@@ -225,7 +227,8 @@ section {
       float: left;
       min-height: 550px;
       min-width: 1280px;
-      padding: 0 100px; }
+      padding: 0 100px;
+      position: relative; }
     /* line 71, resources/sass/mq/tablet/_structure.scss */
     #carousel .jcarousel-pagination {
       position: absolute;
