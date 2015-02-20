@@ -347,57 +347,74 @@ section {
     /* line 177, resources/sass/mq/tablet/_structure.scss */
     #about .about_intro {
       font-family: "Fjalla One", sans-serif;
-      font-size: 48px;
+      font-size: 36px;
+      line-height: 75px;
       letter-spacing: .3em;
       text-transform: uppercase;
-      width: 750px; }
-      /* line 183, resources/sass/mq/tablet/_structure.scss */
+      width: 803px; }
+      /* line 184, resources/sass/mq/tablet/_structure.scss */
       #about .about_intro span {
         display: block;
         font-size: 12px;
         font-family: "Courier", sans-serif;
         letter-spacing: .2em; }
+    /* line 191, resources/sass/mq/tablet/_structure.scss */
+    #about .about_sub {
+      background: black;
+      color: white;
+      position: relative; }
+      /* line 195, resources/sass/mq/tablet/_structure.scss */
+      #about .about_sub .background {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%; }
+        /* line 201, resources/sass/mq/tablet/_structure.scss */
+        #about .about_sub .background .video {
+          height: 33.3%;
+          width: 100%; }
 
   /* WHO SECTION ------------------------------------------------------------*/
-  /* line 194, resources/sass/mq/tablet/_structure.scss */
+  /* line 211, resources/sass/mq/tablet/_structure.scss */
   #who {
     padding: 100px 0 0 0; }
-    /* line 196, resources/sass/mq/tablet/_structure.scss */
+    /* line 213, resources/sass/mq/tablet/_structure.scss */
     #who h2 {
       font-size: 48px;
       letter-spacing: .4em;
       width: 50%; }
-    /* line 201, resources/sass/mq/tablet/_structure.scss */
+    /* line 218, resources/sass/mq/tablet/_structure.scss */
     #who .left {
       float: left;
       padding: 0 50px 0 0;
       width: 390px; }
-      /* line 205, resources/sass/mq/tablet/_structure.scss */
+      /* line 222, resources/sass/mq/tablet/_structure.scss */
       #who .left p {
         line-height: 30px; }
-      /* line 208, resources/sass/mq/tablet/_structure.scss */
+      /* line 225, resources/sass/mq/tablet/_structure.scss */
       #who .left ul {
         list-style: none;
         margin: 0;
         padding: 0; }
-        /* line 211, resources/sass/mq/tablet/_structure.scss */
+        /* line 228, resources/sass/mq/tablet/_structure.scss */
         #who .left ul li {
           margin: 0 0 20px 0; }
-    /* line 216, resources/sass/mq/tablet/_structure.scss */
+    /* line 233, resources/sass/mq/tablet/_structure.scss */
     #who .grid {
       float: right;
       overflow: hidden;
       width: 890px; }
-      /* line 220, resources/sass/mq/tablet/_structure.scss */
+      /* line 237, resources/sass/mq/tablet/_structure.scss */
       #who .grid .person {
         float: left;
         position: relative;
         width: 222px;
         height: 250px; }
-        /* line 224, resources/sass/mq/tablet/_structure.scss */
+        /* line 241, resources/sass/mq/tablet/_structure.scss */
         #who .grid .person.vip {
           width: 445px; }
-        /* line 227, resources/sass/mq/tablet/_structure.scss */
+        /* line 244, resources/sass/mq/tablet/_structure.scss */
         #who .grid .person .overlay {
           opacity: 0;
           -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
@@ -414,73 +431,73 @@ section {
           transition: opacity .25s ease-in-out;
           -moz-transition: opacity .25s ease-in-out;
           -webkit-transition: opacity .25s ease-in-out; }
-          /* line 238, resources/sass/mq/tablet/_structure.scss */
+          /* line 255, resources/sass/mq/tablet/_structure.scss */
           #who .grid .person .overlay:hover {
             opacity: 1;
             -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
             filter: alpha(opacity=100); }
-          /* line 241, resources/sass/mq/tablet/_structure.scss */
+          /* line 258, resources/sass/mq/tablet/_structure.scss */
           #who .grid .person .overlay a {
             color: white;
             display: block;
             height: 100%;
             width: 100%;
             padding: 20px; }
-          /* line 247, resources/sass/mq/tablet/_structure.scss */
+          /* line 264, resources/sass/mq/tablet/_structure.scss */
           #who .grid .person .overlay h3 {
             margin: 0; }
-          /* line 250, resources/sass/mq/tablet/_structure.scss */
+          /* line 267, resources/sass/mq/tablet/_structure.scss */
           #who .grid .person .overlay p {
             font-size: 12px;
             margin: 0; }
-          /* line 254, resources/sass/mq/tablet/_structure.scss */
+          /* line 271, resources/sass/mq/tablet/_structure.scss */
           #who .grid .person .overlay .inner {
             position: relative;
             top: 50%;
             -webkit-transform: translateY(-50%);
             -ms-transform: translateY(-50%);
             transform: translateY(-50%); }
-    /* line 261, resources/sass/mq/tablet/_structure.scss */
+    /* line 278, resources/sass/mq/tablet/_structure.scss */
     #who.full h2 {
       font-size: 24px; }
-    /* line 264, resources/sass/mq/tablet/_structure.scss */
+    /* line 281, resources/sass/mq/tablet/_structure.scss */
     #who.full .grid {
       float: none;
       width: 100%; }
-      /* line 268, resources/sass/mq/tablet/_structure.scss */
+      /* line 285, resources/sass/mq/tablet/_structure.scss */
       #who.full .grid .person {
         height: 239px;
         width: 213px; }
 
   /* CONTACT SECTION ------------------------------------------------------------*/
-  /* line 277, resources/sass/mq/tablet/_structure.scss */
+  /* line 294, resources/sass/mq/tablet/_structure.scss */
   #contact {
     padding: 65px 0; }
-    /* line 279, resources/sass/mq/tablet/_structure.scss */
+    /* line 296, resources/sass/mq/tablet/_structure.scss */
     #contact h2 {
       margin-bottom: 100px; }
-    /* line 283, resources/sass/mq/tablet/_structure.scss */
+    /* line 300, resources/sass/mq/tablet/_structure.scss */
     #contact h3, #contact .phone {
       font-family: "Fjalla One", sans-serif;
       font-size: 24px;
       letter-spacing: .3em;
       margin: 0;
       text-transform: uppercase; }
-    /* line 291, resources/sass/mq/tablet/_structure.scss */
+    /* line 308, resources/sass/mq/tablet/_structure.scss */
     #contact .phone {
       margin-bottom: 120px; }
-    /* line 295, resources/sass/mq/tablet/_structure.scss */
+    /* line 312, resources/sass/mq/tablet/_structure.scss */
     #contact .left {
       float: left;
       width: 325px; }
-    /* line 299, resources/sass/mq/tablet/_structure.scss */
+    /* line 316, resources/sass/mq/tablet/_structure.scss */
     #contact .right {
       margin: 0 0 0 345px; }
-      /* line 301, resources/sass/mq/tablet/_structure.scss */
+      /* line 318, resources/sass/mq/tablet/_structure.scss */
       #contact .right .button {
         display: inline-block;
         margin-bottom: 94px; }
-      /* line 305, resources/sass/mq/tablet/_structure.scss */
+      /* line 322, resources/sass/mq/tablet/_structure.scss */
       #contact .right .email {
         color: white;
         font-family: "Fjalla One", sans-serif;

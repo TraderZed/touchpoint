@@ -65,7 +65,7 @@
       min-height: 550px;
       min-width: 1280px;
       padding: 0 100px;
-      position: relative; 
+      position: relative;
   }
   
   .jcarousel-pagination {
@@ -175,16 +175,24 @@
   color: $black;
   padding: 55px 0;
   .about_intro {
-    font-family: $fjalla;
-    font-size: 48px;
+    font-family: "Fjalla One", sans-serif;
+    font-size: 36px;
+    line-height: 75px;
     letter-spacing: .3em;
     text-transform: uppercase;
-    width: 750px;
+    width: 803px;
     span {
       display: block;
       font-size: 12px;
       font-family: $courier;
       letter-spacing: .2em;
+    }
+  }
+  .about_sub {
+    background: $black;
+    .background {
+      position: absolute; left: 0; top: 0;
+      height: 100%;
     }
   }
 }
