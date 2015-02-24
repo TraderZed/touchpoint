@@ -7,6 +7,7 @@
 		// DOM ready, take it away
 		
 		initCarousel();
+		setupAboutVideos();
 		
 		$('.video_overlay').fitVids();
   	
@@ -57,22 +58,65 @@
 	}
 	
 	var setupCarouselVideos = function() {
-      BV = new $.BigVideo({
-        useFlashForFirefox:true,
-        forceAutoplay:false,
-        controls:false,
-        doLoop:false,
-        container:$('.jcarousel li').first(), //Container
-        shrinkable:false
-      });
-      BV.init();
-      BV.show($('.jcarousel .carousel-item').first().data('video'), {ambient: true});
+/*
+    BV = new $.BigVideo({
+      useFlashForFirefox:true,
+      forceAutoplay:false,
+      controls:false,
+      doLoop:false,
+      container:$('.jcarousel li').first(), //Container
+      shrinkable:false
+    });
+    BV.init();
+    BV.show($('.jcarousel .carousel-item').first().data('video'), {ambient: true});
     
   	$.each($('.jcarousel li'), function(i, elem) {
     	console.log(elem)
-      
-
   	})
+*/
+	}
+	
+	var setupAboutVideos = function () {
+
+/*
+  	var aboutVideo1;
+  	var aboutVideo2;
+  	var aboutVideo3;
+  	
+  	aboutVideo1 = new $.BigVideo({
+      useFlashForFirefox:true,
+      forceAutoplay:false,
+      controls:false,
+      doLoop:false,
+      container:$('#about .background .video_one'), //Container
+      shrinkable:false
+    });
+    
+    aboutVideo2 = new $.BigVideo({
+      useFlashForFirefox:true,
+      forceAutoplay:false,
+      controls:false,
+      doLoop:false,
+      container:$('#about .background .video_two'), //Container
+      shrinkable:false
+    });
+    
+    aboutVideo3 = new $.BigVideo({
+      useFlashForFirefox:true,
+      forceAutoplay:false,
+      controls:false,
+      doLoop:false,
+      container:$('#about .background .video_three'), //Container
+      shrinkable:false
+    });
+    
+    aboutVideo1.init();
+    aboutVideo2.init();
+    aboutVideo3.init();
+    aboutVideo1.show(object_name.templateUrl + '/assets/videos/TOUCHPOINT_1.mp4', {ambient: true});
+    aboutVideo2.show(object_name.templateUrl + '/assets/videos/TOUCHPOINT_2.mp4', {ambient: true});
+    aboutVideo3.show(object_name.templateUrl + '/assets/videos/TOUCHPOINT_3.mp4', {ambient: true});
+*/
 	}
 	
 	var initCarousel = function() {
