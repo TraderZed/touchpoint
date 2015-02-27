@@ -19,18 +19,18 @@
       </div>
     </section><!-- /bio -->
     
-    <?php $post_objects = get_field('work_samples');
+    <?php $post_objects = get_field('videos');
     if( $post_objects ): ?>
     <section id="work">
   		<div class="wrapper">
         <h2><?php echo strtok(get_the_title(), " "); ?>'s Work</h2>
         <?php foreach( $post_objects as $post): // variable must be called $post (IMPORTANT) ?>
-            <?php setup_postdata($post); ?>
-            <div data-video-title="<?php the_title(); ?>" data-vimeo-id="<?php echo get_field( "vimeo_id" );?>" data-video-description="<?php echo get_field( "video_description" );?>" class="video js-show-video active <?php foreach(get_the_terms(get_the_ID(), 'video_categories') as $term) echo $term->slug . " "; ?>">
-      				<img src="<?php echo get_field( "video_preview" );?>"/>
+            <?php setup_postdata($post);?>
+            <div data-video-title="<?php echo $post['video_title'] ?>" data-vimeo-id="<?php echo $post['vimeo_id'];?>" data-video-description="<?php echo $post['video_description'];?>" class="video js-show-video active">
+      				<img src="<?php echo $post['video_preview'];?>"/>
       				<div class="overlay">
         				<div class="inner">
-          				<h3><?php the_title(); ?></h3>
+          				<h3><?php echo $post['video_title'] ?></h3>
                 </div><!-- /inner -->
               </div><!-- /overlay -->
       			</div>

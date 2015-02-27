@@ -11,11 +11,20 @@
   			if( $value )
   			{?>
         <li class="video carousel-item" data-video="<?php echo get_field( "carousel_preview", get_the_ID() ); ?>">
-    			<div>
+    			<div class="sub" style="position: relative; margin-bottom: 100px; ">
     				<h2><?php the_title(); ?></h2>
     				<p><?php echo get_field( "carousel_description", get_the_ID() ); ?></p>
     				<a href="javascript: void(0);" title="Watch" class="btn_watch button js-show-video"data-video-title="<?php the_title(); ?>" data-vimeo-id="<?php echo get_field( "vimeo_id" );?>" data-video-description="<?php echo get_field( "video_description" );?>">Watch</a>
     			</div>
+    			<video class="video-js vjs-default-skin"
+            preload="auto" width="auto" height="auto"
+            autoplay
+            loop
+            muted
+            data-setup=''>
+           <source src="<?php echo get_field( "carousel_preview", get_the_ID() ); ?>" type='video/mp4' />
+           <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+          </video>
     		</li>
   			<?php } ?>  			
   			<?php endwhile; wp_reset_query(); ?>
@@ -77,8 +86,77 @@
 		<section id="about">
   		<div class="wrapper">
         <h2><?php echo get_the_title(35); ?></h2>
-        <h3 class="about_intro">We're a boutique production company with a pretty simple approach. <span>Hire the best people.</span></h3>
+        <h3 class="about_intro">We're a boutique production company with a pretty simple approach. Hire the best people.<span>We’re nimble, resourceful. We do it all.</span></h3>
       </div><!-- /wrapper -->
+        
+        <div class="about_sub">
+          <div class="wrapper">
+            <div class="saffer">
+              <h3>Kevin Saffer</h3>
+              <p class="sub">- Founder & Executive Producer</p>
+              <p>Whether it’s a commercial or a scripted web series—a guerilla advertising stunt or an experiential installation—our clients can always rely on the same care, attention to detail, and passion for the work.</p>
+            </div><!-- /saffer -->
+            
+            <ul class="type_list">
+              <li>ONLINE</li>
+              <li>SOCIAL</li>
+              <li>BROADCAST</li>
+              <li>EXPERIENTIAL</li>
+              <li>MOTION</li>
+            </ul><!-- /type list -->
+            
+            <div class="budget">
+              <h3><span>We can handle</span> big budget
+                <span>&bull;</span>
+                <span>&bull;</span>
+                <span>&bull;</span>
+                <span>&bull;</span>
+                <span>&bull;</span>
+                <span>&bull;</span>
+                <span>&bull;</span>
+                <span class="sub">SMALL GUERILLA</span>
+                <span>AND EVERYTHING IN-BETWEEN</span></h3>
+            </div><!-- /budget -->
+            
+            <div class="about_copy">
+              <?php echo get_field( "about_copy", 35 );?>
+            </div>
+            <div style="width: 100%; height: 1px; clear: both;"></div>
+          </div><!-- /wrapper -->
+
+          <div class="background">
+            <div class="video video_one">
+              <video id="about_video_1" class="video-js vjs-default-skin"
+                preload="auto" width="auto" height="auto"
+                autoplay
+                loop
+                data-setup=''>
+               <source src="<?php echo get_template_directory_uri(); ?>/assets/videos/about_1.mp4" type='video/mp4' />
+               <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+              </video>
+            </div>
+            <div class="video video_two">
+              <video id="about_video_2" class="video-js vjs-default-skin"
+                preload="auto" width="auto" height="auto"
+                autoplay
+                loop
+                data-setup=''>
+               <source src="<?php echo get_template_directory_uri(); ?>/assets/videos/about_2.mp4" type='video/mp4' />
+               <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+              </video>
+            </div>
+            <div class="video video_three">
+              <video id="about_video_3" class="video-js vjs-default-skin"
+                preload="auto" width="auto" height="auto"
+                autoplay
+                loop
+                data-setup=''>
+               <source src="<?php echo get_template_directory_uri(); ?>/assets/videos/about_3.mp4" type='video/mp4' />
+               <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+              </video>
+            </div>
+          </div><!-- /background -->
+        </div><!-- /about_sub -->
 		</section><!-- /about -->
 		
 		<section id="who">
@@ -93,14 +171,6 @@
             $content = str_replace(']]>', ']]&gt;', $content);
             echo $content;
           ?>
-          <ul>
-          <?php $who_query = new WP_Query( array( 'post_type' => 'people', 'posts_per_page' => -1 ) ); ?>
-      		<?php while ( $who_query->have_posts() ) : $who_query->the_post(); ?>
-    			
-    			<li class="person"><?php the_title(); ?>, <?php echo get_field( "job_title" );?></li>
-    			
-    			<?php endwhile; wp_reset_query(); ?>
-    			</ul>
         </div><!-- /left -->
         
         <div class="grid">
