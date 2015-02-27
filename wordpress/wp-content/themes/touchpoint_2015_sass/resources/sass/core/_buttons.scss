@@ -1,13 +1,14 @@
 .button {
-	padding: 10px 40px;
-	border: 2px solid #fff;
-	font-size: 25px;
+	padding: 7px 25px;
+	border: 1px solid #fff;
+	font-size: 10px;
 	font-family: 'Fjalla One', sans-serif;
 	text-transform: uppercase;
 	text-decoration: none;
-	letter-spacing: 4px;
+	letter-spacing: 7px;
 	color: #fff;
 	&:hover {
-  	color: #fff;
+  	background: #fff;
+  	color: #000;
 	}
 }

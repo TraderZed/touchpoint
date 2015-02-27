@@ -39,6 +39,9 @@
       a {
         color: $white;
         padding: 10px;
+        &:hover {
+          text-decoration: line-through;
+        }
       }
     }
   }
