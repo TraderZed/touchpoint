@@ -29,13 +29,9 @@
       margin: 0; padding: 0;
     }
     li {
-      display: inline;
       list-style: none;
-      margin: 0 0 0 80px;
+      margin: 0 0 10px 0;
       text-transform: uppercase;
-      &:first-child {
-        margin: 0;
-      }
       a {
         color: $white;
         padding: 10px;
@@ -47,11 +43,35 @@
   }
   &.main_header {
     background: $white;
+    padding: 25px 0;
+    .title {
+      float: none;
+      margin: 0 auto;
+      padding: 0;
+      width: 40%;
+    }
     
     nav {
+      float: none;
+      margin: 15px 0 0 0;
+      text-align: center;
+      ul {
+        margin: 0; padding: 0;
+      }
       li {
+        display: inline;
+        list-style: none;
+        margin: 0 0 0 5%;
+        text-transform: uppercase;
+        &:first-child {
+          margin: 0;
+        }
         a {
           color: $black;
+          padding: 10px;
+          &:hover {
+            text-decoration: line-through;
+          }
         }
       }
     }

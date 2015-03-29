@@ -1,0 +1,1 @@
+[02-Mar-2015 06:13:42 America/Toronto] PHP Fatal error:  Call to undefined function get_header() in /home/touch483/public_html/wordpress/wp-content/themes/touchpoint_2015_sass/index.php on line 1

@@ -104,7 +104,30 @@ p {
   .single-people #masthead {
     background-position: center center;
     background-size: cover;
-    height: 200px; }
+    height: 200px;
+    position: relative; }
+    .single-people #masthead .gradient {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+      background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNhM2EzYTMiIHN0b3Atb3BhY2l0eT0iMC42NSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+      background: -moz-linear-gradient(top, transparent 0%, rgba(163, 163, 163, 0.65) 100%);
+      /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, transparent), color-stop(100%, rgba(163, 163, 163, 0.65)));
+      /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top, transparent 0%, rgba(163, 163, 163, 0.65) 100%);
+      /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top, transparent 0%, rgba(163, 163, 163, 0.65) 100%);
+      /* Opera 11.10+ */
+      background: -ms-linear-gradient(top, transparent 0%, rgba(163, 163, 163, 0.65) 100%);
+      /* IE10+ */
+      background: linear-gradient(to bottom, transparent 0%, rgba(163, 163, 163, 0.65) 100%);
+      /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6a3a3a3',GradientType=0 );
+      /* IE6-8 */ }
     .single-people #masthead .wrapper {
       height: 100%; }
     .single-people #masthead .copy {
@@ -223,6 +246,8 @@ section {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     z-index: 5; }
+  #carousel .video-js {
+    display: none; }
   #carousel .jcarousel {
     position: relative;
     overflow: hidden; }
@@ -293,7 +318,7 @@ section {
   #work .video {
     cursor: pointer;
     position: relative;
-    opacity: .3;
+    opacity: .2;
     width: 100%;
     height: auto;
     overflow: hidden;
@@ -417,18 +442,14 @@ section {
         text-decoration: none; }
 
 /* WHO SECTION ------------------------------------------------------------*/
-#who .left {
-  float: left;
-  padding: 0 50px 0 0;
-  width: 390px; }
-  #who .left p {
-    line-height: 30px; }
-  #who .left ul {
-    list-style: none;
-    margin: 0;
-    padding: 0; }
-    #who .left ul li {
-      margin: 0 0 20px 0; }
+#who .left p {
+  line-height: 30px; }
+#who .left ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  #who .left ul li {
+    margin: 0 0 20px 0; }
 #who .grid {
   float: right;
   overflow: hidden;
@@ -535,21 +556,41 @@ section {
       margin: 0;
       padding: 0; }
     .header nav li {
-      display: inline;
       list-style: none;
-      margin: 0 0 0 80px;
+      margin: 0 0 10px 0;
       text-transform: uppercase; }
-      .header nav li:first-child {
-        margin: 0; }
       .header nav li a {
         color: #fff;
         padding: 10px; }
         .header nav li a:hover {
           text-decoration: line-through; }
   .header.main_header {
-    background: #fff; }
-    .header.main_header nav li a {
-      color: #000; }
+    background: #fff;
+    padding: 25px 0; }
+    .header.main_header .title {
+      float: none;
+      margin: 0 auto;
+      padding: 0;
+      width: 40%; }
+    .header.main_header nav {
+      float: none;
+      margin: 15px 0 0 0;
+      text-align: center; }
+      .header.main_header nav ul {
+        margin: 0;
+        padding: 0; }
+      .header.main_header nav li {
+        display: inline;
+        list-style: none;
+        margin: 0 0 0 5%;
+        text-transform: uppercase; }
+        .header.main_header nav li:first-child {
+          margin: 0; }
+        .header.main_header nav li a {
+          color: #000;
+          padding: 10px; }
+          .header.main_header nav li a:hover {
+            text-decoration: line-through; }
 
 /* FOOTER ---------------------------------------------------------------*/
 /* MEDIA QUERIES --------------------------------------------------------*/
@@ -595,11 +636,13 @@ section {
     have a fixed width and height (but it's not required).
     */ }
     #carousel h2 {
-      font-size: 96px;
+      font-size: 65px;
       margin: 50px 0; }
     #carousel p {
       line-height: 30px;
       padding: 0 350px; }
+    #carousel .video-js {
+      display: block; }
     #carousel .jcarousel li {
       /* Required only for block elements like <li>'s */
       height: 550px;
@@ -718,6 +761,60 @@ section {
       #contact .right .email {
         font-size: 18px;
         letter-spacing: .3em; }
+
+  .header {
+    padding: 55px 0 40px 0; }
+    .header .title {
+      float: left;
+      margin: 0;
+      width: auto; }
+    .header nav {
+      float: right;
+      margin: 8px 0 0 0;
+      text-align: right; }
+      .header nav ul {
+        margin: 0;
+        padding: 0; }
+      .header nav li {
+        float: left;
+        display: inline;
+        list-style: none;
+        margin: 0 0 0 80px;
+        text-transform: uppercase; }
+        .header nav li:first-child {
+          margin: 0; }
+        .header nav li a {
+          color: #fff;
+          padding: 10px; }
+          .header nav li a:hover {
+            text-decoration: line-through; }
+    .header.main_header {
+      background: #fff;
+      padding: 55px 0 40px 0; }
+      .header.main_header .title {
+        float: left;
+        margin: 0;
+        padding: 0;
+        width: auto; }
+      .header.main_header nav {
+        float: right;
+        margin: 8px 0 0 0;
+        text-align: right; }
+        .header.main_header nav ul {
+          margin: 0;
+          padding: 0; }
+        .header.main_header nav li {
+          display: inline;
+          list-style: none;
+          margin: 0 0 0 80px;
+          text-transform: uppercase; }
+          .header.main_header nav li:first-child {
+            margin: 0; }
+          .header.main_header nav li a {
+            color: #000;
+            padding: 10px; }
+            .header.main_header nav li a:hover {
+              text-decoration: line-through; }
 
   /*-------------------------------------------------------------------------
   	

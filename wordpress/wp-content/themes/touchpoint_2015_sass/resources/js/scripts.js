@@ -125,6 +125,7 @@
         var element = $(this),
             width = element.innerWidth();
         element.jcarousel('items').css('width', width + 'px');
+        setupCarouselVideos();
     })
     .jcarousel({
       wrap: 'both',
@@ -150,7 +151,7 @@
           $(this).removeClass('active');
       });
       
-    setupCarouselVideos();
+    
 	}
 	
   videoOverlay = {

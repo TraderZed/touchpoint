@@ -58,6 +58,7 @@
         'posts_per_page' => -1,
         'post_status'=>'publish',
         'post_type' => 'video',
+        'orderby' => 'rand',
         'meta_query' => array(
             array(
                 'key' => 'include_in_work_section',
@@ -179,6 +180,8 @@
           'posts_per_page' => -1,
           'post_status'=>'publish',
           'post_type' => 'people',
+          'orderby'   => 'menu_order',
+          'order'     => 'ASC',
           'meta_query' => array(
               array(
                   'key' => 'vip',
@@ -190,12 +193,13 @@
           'posts_per_page' => -1,
           'post_status'=>'publish',
           'post_type' => 'people',
-          'orderby' => 'rand',
+          'orderby' => 'title',
+          'order' => 'ASC',
           'meta_query' => array(
               array(
                   'key' => 'vip',
                   'value' => 0,
-                  'compare' => 'IN',
+                  'compare' => 'IN'
               )
           ));
           ?>
@@ -246,6 +250,8 @@
           'posts_per_page' => -1,
           'post_status'=>'publish',
           'post_type' => 'people',
+          'orderby'   => 'menu_order',
+          'order'     => 'ASC',
           'meta_query' => array(
               array(
                   'key' => 'show_contact_info',

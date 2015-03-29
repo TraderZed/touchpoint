@@ -4,6 +4,7 @@
 
 	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
     <section id="masthead" style="background-image: url(<?php echo get_field( "cover_photo" );?>)">
+      <div class="gradient"></div>
       <div class="wrapper">
         <div class="copy">
           <h2><?php the_title(); ?></h2>
@@ -23,7 +24,7 @@
     if( $post_objects ): ?>
     <section id="work">
   		<div class="wrapper">
-        <h2><?php echo strtok(get_the_title(), " "); ?>'s Work</h2>
+        <h2><?php echo get_the_title(); ?>'s Work</h2>
         <?php foreach( $post_objects as $post): // variable must be called $post (IMPORTANT) ?>
             <?php setup_postdata($post);?>
             <div data-video-title="<?php echo $post['video_title'] ?>" data-vimeo-id="<?php echo $post['vimeo_id'];?>" data-video-description="<?php echo $post['video_description'];?>" class="video js-show-video active">
@@ -49,7 +50,8 @@
           'posts_per_page' => -1,
           'post_status'=>'publish',
           'post_type' => 'people',
-          'orderby' => 'rand'
+          'orderby'   => 'title',
+          'order'     => 'ASC'
           );
           ?>
     			
