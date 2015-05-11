@@ -20,50 +20,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/assets\/images\/gravatar.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 3482,
-		"inputAbbreviatedPath": "\/assets\/images\/gravatar.jpg",
-		"outputAbbreviatedPath": "\/assets\/images\/gravatar.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/images\/icons\/touch.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 15472,
-		"inputAbbreviatedPath": "\/assets\/images\/icons\/touch.png",
-		"outputAbbreviatedPath": "\/assets\/images\/icons\/touch.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/images\/logo.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 955,
-		"inputAbbreviatedPath": "\/assets\/images\/logo.png",
-		"outputAbbreviatedPath": "\/assets\/images\/logo.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/images\/saffer.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 50832,
-		"inputAbbreviatedPath": "\/assets\/images\/saffer.png",
-		"outputAbbreviatedPath": "\/assets\/images\/saffer.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/author.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -187,6 +143,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/mq\/tablet\/_structure.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/mq\/tablet\/_structure.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/normalize.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -300,6 +265,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/single-video.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/single-video.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/single.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -354,7 +328,7 @@
 "projectAttributes": {
 	"bowerAbbreviatedPath": "",
 	"displayValue": "touchpoint_2015_sass",
-	"displayValueWasSetByUser": 0,
+	"displayValueWasSetByUser": 1,
 	"iconImageName": "harddrive_darkGray"
 	},
 "projectSettings": {

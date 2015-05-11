@@ -1,12 +1,12 @@
 .header {
   padding: 55px 0 40px 0;
-  
+
   .title {
     float: left;
     margin: 0;
     width: auto;
   }
-  
+
   nav {
     float: right;
     margin: 8px 0 0 0;
@@ -32,17 +32,22 @@
       }
     }
   }
-  
+
   &.main_header {
     background: $white;
     padding: 55px 0 40px 0;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 10;
     .title {
       float: left;
       margin: 0;
       padding: 0;
       width: auto;
     }
-    
+
     nav {
       float: right;
       margin: 8px 0 0 0;

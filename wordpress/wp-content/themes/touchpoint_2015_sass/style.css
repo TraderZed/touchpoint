@@ -612,16 +612,19 @@ section {
 /* TABLET & SMALLER LAPTOPS ---------------------------------------------*/
 @media screen and (min-width: 768px) {
   /*-------------------------------------------------------------------------
-  	
+  
   	TOUCHPOINT 2015
-  	
+  
   	TABLET STRUCTURE
   	-----------------------------------
-  	
+  
   	- Work Section
   	- Who Section
   
   -------------------------------------------------------------------------*/
+  body {
+    padding-top: 123px; }
+
   .wrapper {
     width: 95%; }
 
@@ -630,6 +633,7 @@ section {
     padding: 13px 40px; }
 
   #carousel {
+    visibility: hidden;
     position: relative;
     min-height: 550px;
     text-align: center;
@@ -792,7 +796,12 @@ section {
             text-decoration: line-through; }
     .header.main_header {
       background: #fff;
-      padding: 55px 0 40px 0; }
+      padding: 55px 0 40px 0;
+      position: fixed;
+      width: 100%;
+      left: 0;
+      top: 0;
+      z-index: 10; }
       .header.main_header .title {
         float: left;
         margin: 0;

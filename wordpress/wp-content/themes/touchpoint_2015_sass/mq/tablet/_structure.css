@@ -1,0 +1,153 @@
+/*-------------------------------------------------------------------------
+
+	TOUCHPOINT 2015
+
+	TABLET STRUCTURE
+	-----------------------------------
+
+	- Work Section
+	- Who Section
+
+-------------------------------------------------------------------------*/
+.wrapper {
+  width: 95%; }
+
+.button {
+  font-size: 18px;
+  padding: 13px 40px; }
+
+#carousel {
+  visibility: hidden;
+  position: relative;
+  min-height: 550px;
+  text-align: center;
+  /*
+  These are the item elements. jCarousel works best, if the items
+  have a fixed width and height (but it's not required).
+  */ }
+  #carousel h2 {
+    font-size: 65px;
+    margin: 50px 0; }
+  #carousel p {
+    line-height: 30px;
+    padding: 0 350px; }
+  #carousel .video-js {
+    display: block; }
+  #carousel .jcarousel li {
+    /* Required only for block elements like <li>'s */
+    height: 550px;
+    padding: 0 100px 100px 100px; }
+
+/* WORK SECTION ------------------------------------------------------------*/
+.video_overlay {
+  padding: 50px; }
+  .video_overlay h4 {
+    right: 50px;
+    top: 50px; }
+  .video_overlay .fluid-width-video-wrapper {
+    margin: 50px 0; }
+  .video_overlay .button {
+    font-size: 14px; }
+
+#work .video {
+  float: left;
+  width: 33.3%; }
+
+#about .about_intro {
+  font-size: 36px;
+  line-height: 75px;
+  letter-spacing: .3em;
+  width: 803px; }
+  #about .about_intro span {
+    font-size: 12px; }
+#about .about_sub .saffer {
+  background-size: auto;
+  padding: 300px 0 0 0;
+  width: 375px; }
+#about .about_sub .background {
+  display: block;
+  opacity: .5;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%; }
+  #about .about_sub .background .video {
+    width: 100%;
+    height: 33.3%;
+    overflow: hidden; }
+    #about .about_sub .background .video .video-js .vjs-tech {
+      height: auto; }
+#about .about_sub .type_list {
+  font-size: 72px;
+  line-height: 115px; }
+#about .about_sub .budget {
+  font-size: 72px;
+  width: 400px; }
+  #about .about_sub .budget .sub {
+    font-size: 30px; }
+#about .about_sub .about_copy {
+  float: right;
+  width: 465px; }
+  #about .about_sub .about_copy p {
+    margin-bottom: 20px;
+    line-height: 26px; }
+
+/* WHO SECTION ------------------------------------------------------------*/
+#who {
+  padding: 100px 0 0 0; }
+  #who h2 {
+    font-size: 48px;
+    letter-spacing: .4em;
+    width: 50%; }
+  #who .left {
+    float: left;
+    padding: 0 50px 0 0;
+    width: 33.3%; }
+    #who .left p {
+      line-height: 30px; }
+    #who .left ul {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      #who .left ul li {
+        margin: 0 0 20px 0; }
+  #who .grid {
+    width: 66.6%; }
+    #who .grid .person {
+      width: 25%;
+      height: auto; }
+      #who .grid .person.vip {
+        width: 50%; }
+  #who.full h2 {
+    font-size: 24px; }
+  #who.full .grid {
+    float: none;
+    width: 100%; }
+    #who.full .grid .person {
+      height: 239px;
+      width: 213px; }
+
+/* CONTACT SECTION ------------------------------------------------------------*/
+#contact {
+  padding: 65px 0; }
+  #contact h2 {
+    font-size: 48px;
+    letter-spacing: .4em;
+    margin-bottom: 50px; }
+  #contact h3, #contact .phone {
+    font-size: 24px; }
+  #contact p {
+    margin: 10px 0 40px 0; }
+  #contact .email {
+    margin-bottom: 89px; }
+  #contact .left {
+    float: left;
+    width: 325px; }
+  #contact .right {
+    margin: 0 0 0 345px; }
+    #contact .right .button {
+      margin-bottom: 94px; }
+    #contact .right .email {
+      font-size: 18px;
+      letter-spacing: .3em; }
