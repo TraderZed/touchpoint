@@ -316,20 +316,17 @@ section {
   #work .category_list li .active {
     text-decoration: line-through; }
   #work .video {
+    display: none;
     cursor: pointer;
     position: relative;
-    opacity: .2;
     width: 100%;
     height: auto;
-    overflow: hidden;
-    transition: opacity .15s ease-in-out;
-    -moz-transition: opacity .15s ease-in-out;
-    -webkit-transition: opacity .15s ease-in-out; }
+    overflow: hidden; }
     #work .video img {
       height: 100%;
       width: 100%; }
     #work .video.active {
-      opacity: 1; }
+      display: block; }
     #work .video .overlay {
       opacity: 0;
       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
@@ -518,8 +515,13 @@ section {
     text-transform: uppercase; }
   #contact p {
     margin: 5px 0 20px 0; }
-  #contact .phone {
+  #contact .email {
     margin-bottom: 50px; }
+    #contact .email a {
+      color: #fff;
+      text-decoration: underline; }
+  #contact .phone {
+    margin-bottom: 10px; }
   #contact .right .button {
     display: inline-block;
     margin-bottom: 50px; }
@@ -749,8 +751,8 @@ section {
       font-size: 24px; }
     #contact p {
       margin: 10px 0 40px 0; }
-    #contact .phone {
-      margin-bottom: 120px; }
+    #contact .email {
+      margin-bottom: 89px; }
     #contact .left {
       float: left;
       width: 325px; }

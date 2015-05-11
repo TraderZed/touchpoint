@@ -46,14 +46,49 @@
         <h2>Who</h2>
         <div class="grid">
           <?php
+          $vip_args = array(
+          'posts_per_page' => -1,
+          'post_status'=>'publish',
+          'post_type' => 'people',
+          'orderby'   => 'menu_order',
+          'order'     => 'ASC',
+          'meta_query' => array(
+              array(
+                  'key' => 'vip',
+                  'value' => 1,
+                  'compare' => 'IN',
+              )
+          ));
           $person_args = array(
           'posts_per_page' => -1,
           'post_status'=>'publish',
           'post_type' => 'people',
-          'orderby'   => 'title',
-          'order'     => 'ASC'
-          );
+          'orderby' => 'title',
+          'order' => 'ASC',
+          'meta_query' => array(
+              array(
+                  'key' => 'vip',
+                  'value' => 0,
+                  'compare' => 'IN'
+              )
+          ));
           ?>
+      		<?php $who_query = new WP_Query( $vip_args ); ?>
+      		<?php while ( $who_query->have_posts() ) : $who_query->the_post(); ?>
+    			
+    			<div class="person vip">
+      		  <img src="<?php echo get_field( "profile_photo" );?>" alt="<?php the_title(); ?>" />
+    				<div class="overlay">
+      				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+        				<div class="inner">
+          				<h3><?php the_title(); ?></h3>
+          				<p><?php echo get_field( "job_title" );?></p>
+                </div><!-- /inner -->
+              </a>
+            </div><!-- /overlay -->
+    			</div>
+    			
+    			<?php endwhile; wp_reset_query(); ?>
     			
     			<?php $who_query = new WP_Query( $person_args ); ?>
       		<?php while ( $who_query->have_posts() ) : $who_query->the_post(); ?>

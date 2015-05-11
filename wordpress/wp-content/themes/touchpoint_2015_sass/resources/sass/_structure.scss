@@ -158,20 +158,17 @@ section {
     }
   }
   .video {
+    display: none;
     cursor: pointer;
     position: relative; 
-    opacity: .2;
     width: 100%; height: auto;
     overflow: hidden;
-    transition: opacity .15s ease-in-out;
-    -moz-transition: opacity .15s ease-in-out;
-    -webkit-transition: opacity .15s ease-in-out;
     img {
       height: 100%;
       width: 100%;
     }
     &.active {
-      opacity: 1;
+      display: block;
     }
     .overlay {
       @include opacity(0);
@@ -389,8 +386,15 @@ section {
     margin: 5px 0 20px 0;
   }
   
-  .phone {
+  .email {
     margin-bottom: 50px;
+    a {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+  .phone {
+    margin-bottom: 10px;
   }
   
   .right {

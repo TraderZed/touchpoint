@@ -41,7 +41,7 @@
     			
     			<nav>
     			<?php
-    			$terms = get_terms( 'video_categories' );
+    			$terms = get_terms( 'video_categories', 'orderby=none' );
     			 if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
     			     echo '<ul class="category_list">';
     			     echo '<li><a href="javascript: void(0);" data-category="all" class="js-video-category active">All</a></li>';
@@ -268,6 +268,7 @@
     				<h3><?php the_title(); ?></h3>
     				<p><?php echo get_field( "job_title" );?></p>
     				<p class="phone"><?php echo get_field( "phone_number" );?></p>
+    				<p class="email"><a href="mailto:<?php echo get_field( "email" );?>"><?php echo get_field( "email" );?></a></p>
     			</div>
     			
     			<?php endwhile; wp_reset_query(); ?>

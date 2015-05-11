@@ -164,7 +164,7 @@
       
       $videoOverlay.find('h4').text(videoTitle);
       $videoOverlay.find('p').text(videoDesc);
-      $videoOverlay.find('iframe').attr('src', '//player.vimeo.com/video/' + vimeoID + '?autoplay=1&color=3e3f40&title=0&byline=0&portrait=0');
+      $videoOverlay.find('iframe').replaceWith('<iframe src="//player.vimeo.com/video/' + vimeoID + '?autoplay=1&color=3e3f40&title=0&byline=0&portrait=0"  width="960" height="409" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
       $videoOverlay.fadeIn(200);
   	},
   	close: function() {
