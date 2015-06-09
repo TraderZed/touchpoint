@@ -34,6 +34,7 @@
   }
 
   &.main_header {
+    transition: all 0.2s ease;
     background: $white;
     padding: 55px 0 40px 0;
     position: fixed;
@@ -41,6 +42,9 @@
     left: 0;
     top: 0;
     z-index: 10;
+    &.sticky {
+      padding: 20px 0;
+    }
     .title {
       float: left;
       margin: 0;

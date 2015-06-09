@@ -11,18 +11,18 @@
 	License URI: http://opensource.org/licenses/mit-license.php
 */
 /*-------------------------------------------------------------------------
-	
+
 	TOUCHPOINT 2015
-	
+
 	BASE STYLE IMPORTS
 	-----------------------------------
-	
+
 	- Normalize
 	- Mixins
 	- Helpers
 	- Core Styles
 	- Structure
-	- Header 
+	- Header
 	- Footer
 	- Media Queries
 	- Retina
@@ -795,6 +795,7 @@ section {
           .header nav li a:hover {
             text-decoration: line-through; }
     .header.main_header {
+      transition: all 0.2s ease;
       background: #fff;
       padding: 55px 0 40px 0;
       position: fixed;
@@ -802,6 +803,8 @@ section {
       left: 0;
       top: 0;
       z-index: 10; }
+      .header.main_header.sticky {
+        padding: 20px 0; }
       .header.main_header .title {
         float: left;
         margin: 0;

@@ -1,10 +1,10 @@
 /*-------------------------------------------------------------------------
-	
+
 	TOUCHPOINT 2015
-	
+
 	HEADER STYLES
 	-----------------------------------
-	
+
 	- Global Headers
 
 -------------------------------------------------------------------------*/
@@ -14,13 +14,13 @@
 .header {
   overflow: hidden;
   padding: 55px 0 40px 0;
-  
+
   .title {
     float: left;
     margin: 0;
     padding: 0;
   }
-  
+
   nav {
     float: right;
     margin: 8px 0 0 0;
@@ -44,13 +44,14 @@
   &.main_header {
     background: $white;
     padding: 25px 0;
+
     .title {
       float: none;
       margin: 0 auto;
       padding: 0;
       width: 40%;
     }
-    
+
     nav {
       float: none;
       margin: 15px 0 0 0;

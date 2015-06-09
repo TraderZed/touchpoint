@@ -13,6 +13,12 @@
     $('.single-video #vimeo').fitVids();
   	// Event city!
 
+    $(window).scroll(function() {
+      if (screen.width > 980) {
+        toggleNav();
+      }
+    });
+
   	$('body').on('click', '.js-show-video', function(e) {
     	e.preventDefault();
     	videoOverlay.open($(this));
@@ -42,6 +48,14 @@
       }
     });
 	});
+
+  var toggleNav = function() {
+    if($(window).scrollTop() > 100) {
+      $('.main_header').addClass('sticky');
+    } else {
+      $('.main_header').removeClass('sticky');
+    }
+  }
 
 	var videoFilter = function(context, cat) {
   	$context = context;
